@@ -15,13 +15,13 @@ from pyrogram.errors import (
 API_TEXT = """Hi, {}.
 This is Pyrogram's String Session Generator Bot. I will generate String Session of your Telegram Account.
 
-By @Discovery_Updates
+By @lkhitech
 
 Now send your `API_ID` same as `APP_ID` to Start Generating Session."""
 HASH_TEXT = "Now send your `API_HASH`.\n\nPress /cancel to Cancel Task."
 PHONE_NUMBER_TEXT = (
     "Now send your Telegram account's Phone number in International Format. \n"
-    "Including Country code. Example: **+14154566376**\n\n"
+    "Including Country code. Ex: **+14154566376**\n\n"
     "Press /cancel to Cancel Task."
 )
 
@@ -124,9 +124,9 @@ async def genStr(_, msg: Message):
         return
     try:
         session_string = await client.export_session_string()
-        await client.send_message("me", f"#PYROGRAM #STRING_SESSION\n\n```{session_string}``` \n\nBy [@StringSessionGen_Bot](tg://openmessage?user_id=1472531255) \nA Bot By @Discovery_Updates")
+        await client.send_message("me", f"#PYROGRAM #STRING_SESSION\n\n```{session_string}``` \n\nBy [@TGSSGlk_bot](tg://openmessage?user_id=931409487) \nA Bot By @lkhitech")
         await client.disconnect()
-        text = "String Session is Successfully Generated.\nClick on Below Button."
+        text = "String Session is Successfully Generated.✅\nClick on Below Button."
         reply_markup = InlineKeyboardMarkup(
             [[InlineKeyboardButton(text="Show String Session", url=f"tg://openmessage?user_id={chat.id}")]]
         )
@@ -159,12 +159,10 @@ Must Join Channel for Bot Updates !!
     reply_markup = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton('Support Group', url='https://t.me/linux_repo'),
-                InlineKeyboardButton('Developer', url='https://t.me/AbirHasan2005')
+                InlineKeyboardButton('♦️ Support Channel ♦️', url='https://t.me/lkhitech'),
+                InlineKeyboardButton('♦️ YouTube Channel ♦️', url='https://youtube.com/c/KavinduAj')
             ],
-            [
-                InlineKeyboardButton('Bots Updates Channel', url='https://t.me/Discovery_Updates'),
-            ]
+            
         ]
     )
     await msg.reply(out, reply_markup=reply_markup)
